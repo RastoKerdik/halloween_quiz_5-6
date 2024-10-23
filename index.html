@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALLOWEEN QUIZ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 4em;
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px #000;
+            color: #ffd700;
+        }
+        .intro-text {
+            font-size: 1.5em;
+            margin: 20px 10%;
+            text-align: center;
+            line-height: 1.7;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+        }
+        .quiz-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .question-section {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            position: relative;
+        }
+        .question {
+            background-color: #222;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.5s, transform 0.4s ease-in-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        .question:hover {
+            background-color: #333;
+            transform: translateY(-5px);
+        }
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.2s ease, opacity 1s ease;
+            opacity: 0;
+            padding: 0 15px;
+            margin-top: 10px;
+            background-color: #444;
+            border-radius: 8px;
+            color: #ffd700;
+        }
+        .answer.open {
+            max-height: 300px;
+            opacity: 1;
+            padding: 10px 15px;
+        }
+        @media (max-width: 768px) {
+            .quiz-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .question-section {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HALLOWEEN QUIZ</h1>
+    <div class="intro-text">
+        Halloween, celebrated on October 31st, has ancient roots dating back to the Celtic festival of Samhain. During this time, people believed that the boundary between the living and the dead was blurred, and spirits could roam the Earth. Over the centuries, Halloween has evolved into a fun and spooky celebration filled with costumes, haunted houses, candy, and eerie traditions. But beyond the costumes and candy, there’s a rich history behind Halloween’s customs. Test your knowledge of the history, traditions, and spooky lore of this haunting holiday!
+    </div>
+
+    <div class="quiz-container">
+        <!-- Left Column -->
+        <div class="question-section">
+            <div class="question" onclick="toggleAnswer(0)">
+                1. What ancient Celtic festival is the precursor to Halloween?
+                <div class="answer">The Celtic festival Samhain is considered the precursor to Halloween, marking the end of the harvest and the beginning of the dark winter months.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(1)">
+                2. Why were bonfires an important part of ancient Halloween traditions?
+                <div class="answer">Bonfires were believed to ward off evil spirits and were used for protection during Samhain.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(2)">
+                3. What was the significance of wearing costumes during Samhain?
+                <div class="answer">People wore costumes to disguise themselves from spirits, believing it would help them avoid being recognized by wandering souls.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(3)">
+                4. When did Halloween begin to be celebrated in the United States?
+                <div class="answer">Halloween became popular in the United States in the mid-1800s, brought by Irish immigrants during the Great Famine.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(4)">
+                5. What is the original meaning behind the name "Halloween"?
+                <div class="answer">The name “Halloween” comes from "All Hallows' Eve," the night before All Saints’ Day, a Christian holiday honoring saints.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(5)">
+                6. What role do spirits play in traditional Halloween folklore?
+                <div class="answer">In folklore, spirits were thought to roam the Earth on Halloween, and people believed they had to be protected from them with rituals and offerings.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(6)">
+                7. Why were jack-o'-lanterns originally carved from turnips?
+                <div class="answer">In Ireland, jack-o'-lanterns were originally carved from turnips to ward off evil spirits, especially "Stingy Jack," a trickster in folklore.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(7)">
+                8. What is the historical significance of trick-or-treating?
+                <div class="answer">Trick-or-treating has its roots in the medieval practice of “souling,” when the poor would go door-to-door offering prayers for the dead in exchange for food.</div>
+            </div>
+        </div>
+
+        <!-- Middle Column -->
+        <div class="question-section">
+            <div class="question" onclick="toggleAnswer(8)">
+                9. How did the use of masks evolve in Halloween traditions?
+                <div class="answer">Masks were originally worn to scare away spirits, but over time evolved into a key part of costume celebrations for Halloween.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(9)">
+                10. What is the connection between Halloween and harvest festivals?
+                <div class="answer">Halloween is closely linked to ancient harvest festivals, marking the end of the agricultural cycle and the preparation for winter.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(10)">
+                11. Why is October 31st significant in both pagan and Christian traditions?
+                <div class="answer">For pagans, October 31st marked Samhain, the end of the harvest, while for Christians it became the eve of All Saints’ Day, a time to honor the saints and martyrs.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(11)">
+                12. What are some common superstitions associated with Halloween?
+                <div class="answer">Superstitions include beliefs about black cats bringing bad luck, ghosts roaming the Earth, and the thinning veil between the living and dead.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(12)">
+                13. What are some of the most common symbols of Halloween?
+                <div class="answer">Common Halloween symbols include black cats, jack-o'-lanterns, witches, ghosts, skeletons, and bats.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(13)">
+                14. How did pumpkins become associated with Halloween in the United States?
+                <div class="answer">Pumpkins replaced turnips as the symbol of Halloween in the U.S. due to their abundance and ease of carving.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(14)">
+                15. What ancient customs influenced the modern Halloween party?
+                <div class="answer">Ancient customs of gathering around bonfires, storytelling, and divination games influenced the modern Halloween party atmosphere.</div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="question-section">
+            <div class="question" onclick="toggleAnswer(15)">
+                16. What role do bats play in Halloween mythology?
+                <div class="answer">Bats, often seen at ancient bonfires, were linked to Halloween as symbols of darkness, death, and the supernatural.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(16)">
+                17. What are some modern variations of Halloween in other countries?
+                <div class="answer">In Mexico, Día de los Muertos honors the dead, while in the UK, people celebrate Guy Fawkes Night with bonfires and fireworks around the same time.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(17)">
+                18. Why do people carve scary faces into pumpkins for Halloween?
+                <div class="answer">Scary faces were carved to frighten away evil spirits believed to roam the Earth during Samhain.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(18)">
+                19. How did witches become an iconic Halloween symbol?
+                <div class="answer">Witches became associated with Halloween through folklore about their supernatural powers and midnight rituals.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(19)">
+                20. What is the history behind haunted houses at Halloween?
+                <div class="answer">Haunted houses became popular in the U.S. during the 20th century, growing out of urban legends and the desire for spooky entertainment.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(20)">
+                21. How is Halloween linked to the idea of the supernatural?
+                <div class="answer">Halloween traditions center on the supernatural, with ghosts, witches, and spirits believed to be especially active on October 31st.</div>
+            </div>
+            <div class="question" onclick="toggleAnswer(21)">
+                22. What is the origin of Halloween candy?
+                <div class="answer">Giving out Halloween candy evolved from the tradition of giving food to wandering spirits or “souling” beggars.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(index) {
+            const answers = document.querySelectorAll('.answer');
+            answers[index].classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>
